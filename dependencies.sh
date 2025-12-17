@@ -21,8 +21,9 @@
 # dependent changes should be updated to the revision at which those
 # changes were committed to the project's trunk
 
-export lfric_core_rev=54094
-export lfric_core_sources=
+
+export lfric_core_rev=
+export lfric_core_sources=/home/users/jed.baker/branches/958/git_migration_timing_mod_4669
 export casim_rev=apps2.2
 export casim_sources=
 export jules_rev=31238
