@@ -13,7 +13,7 @@
                             'module load lfric-gnu/12.2.0/3.0+ || true ; '~
                             'module use /home/users/jed.baker/mods/gnu ; '~
                             'echo "FFLAGS before Psy: $FFLAGS" ; '~
-                            'module load gnu_psy ; '~  
+                            'module load gnu_psy ; '~
                             'echo "FFLAGS before Psy: $FFLAGS" ; ' %}
 
 {% set ex1a_compiler_cce =  'module switch PrgEnv-cray PrgEnv-cray/8.4.0 ; ' ~
@@ -22,7 +22,7 @@
                             'module load lfric-cray/15.0.0/3.0+ || true ; '~
                             'module use /home/users/jed.baker/mods/cce ; '~
                             'echo "FFLAGS before Psy: $FFLAGS" ; '~
-                            'module load cce_psy ; '~  
+                            'module load cce_psy ; '~
                             'echo "FFLAGS before Psy: $FFLAGS" ; ' %}
 
 {% set ex1a_coupled_cce = 'module unload xios/2701-h57fm7d || true ; ' ~
@@ -57,7 +57,7 @@
         [[[environment]]]
             TRANSMUTE_INCLUDE_METHOD = specify_include
         [[[environment]]]
-            USE_LEGACY_TIMER=true
+            USE_TIMING_WRAPPER=true
             USE_VERNIER=true
             USE_PSYDATA_PROFILING_KERNELS=yes
         [[[directives]]]
