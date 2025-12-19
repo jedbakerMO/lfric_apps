@@ -56,10 +56,9 @@
     [[EX1A_BUILD]]
         [[[environment]]]
             TRANSMUTE_INCLUDE_METHOD = specify_include
-        [[[environment]]]
             USE_TIMING_WRAPPER=true
             USE_VERNIER=true
-            USE_PSYDATA_PROFILING_KERNELS=yes
+            USE_PSYDATA_PROFILING_KERNELS=true
         [[[directives]]]
             -l tmpsize=12GB
 

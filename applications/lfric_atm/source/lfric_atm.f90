@@ -31,6 +31,8 @@ program lfric_atm
   use timing_mod,             only: init_timing, final_timing, &
                                     start_timing, stop_timing, &
                                     tik, LPROF
+  use profile_psy_data_mod,   only: profile_PSyDataInit, &
+                                    profile_PSyDataShutdown
   use io_config_mod,          only: timer_output_path
 
   implicit none
@@ -75,7 +77,9 @@ program lfric_atm
 
   io_nml => modeldb%configuration%get_namelist('io')
   call io_nml%get_value('subroutine_timers', lsubroutine_timers)
-  call init_timing( modeldb%mpi%get_comm(), lsubroutine_timers, application_name, timer_output_path )
+  call init_timing( modeldb%mpi%get_comm(), lsubroutine_timers, &
+                    application_name, timer_output_path )
+  call profile_PSyDataInit()
   nullify( io_nml )
   if ( LPROF ) call start_timing( id_setup, '__setup__' )
 
@@ -95,6 +99,7 @@ program lfric_atm
   call final_counters( application_name )
   call final_time( modeldb )
   call final_collections()
+  call profile_PSyDataShutdown()
   call final_timing( application_name )
   call final_logger( application_name )
   call final_config()
