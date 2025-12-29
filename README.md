@@ -2,6 +2,7 @@
 
 [![ci](https://github.com/MetOffice/lfric_apps/actions/workflows/ci.yml/badge.svg)](https://github.com/MetOffice/lfric_apps/actions/workflows/ci.yml)
 
+Test change for signing.
 This repository is home to the LFRic-based science applications and libraries such as
 lfric_atm and the GungHo dynamical core.
 
